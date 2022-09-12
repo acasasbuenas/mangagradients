@@ -21,4 +21,6 @@ plateifus=t['PLATEIFU'][0:6522]
  
  - **plateifu_list**: list of galaxies to run at one time. Because this code is slow and Marvin sometimes gives errors when trying to retrieve the maps, we chose to run the code 200 galaxies at once, and then put all the tables together in the same folder, and put them together with the program **stacktables.py** 
 
+The tables generated are **tabla_manga_full_updated.ecsv** and **tabla_mangaagn_updated.ecsv**
+
 This program has the code to make the graphs for each galaxy commented, because it takes too long and we're using a big sample of galaxies. In order to see the stellar maps, check the folder **02_maps**. 
