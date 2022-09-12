@@ -1,6 +1,6 @@
 # Generate tables with the relevant parameters
 
-The program **table.py** does the relevant kinematic analysis for all the galaxies in a sample.
+The program **tables.py** does the relevant kinematic analysis for all the galaxies in a sample.
 
 The part we need to change is a section framed with exclamation symbols, and it goes from line 455 to 465.
 
