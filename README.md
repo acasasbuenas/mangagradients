@@ -1,4 +1,4 @@
-# Inferring dynamicl distinct components in nearby galaxies using velocity gradients
+# Inferring dynamical distinct components in nearby galaxies using velocity gradients
 ## Alba Casasbuenas Corral (Beca de Verano IAC, 2022)
 ### Supervisors: Begoña García-Lorenzo & Natacha Zanon Dametto
 
