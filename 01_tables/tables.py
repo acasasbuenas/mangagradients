@@ -17,9 +17,9 @@ import glob
 #######################################################################
 ############ Definimos las funciones que harán falta ##################
 #######################################################################
-
 pix_size=0.5 #arcsec
 PSF=2.5 #arcsec
+fiber_size=2 #arcsec
 
 #Interquartile Range Method: finds the outlier values in an array
 #We use this later to mask outlier values in the velocity maps.
