@@ -454,7 +454,7 @@ def kin_analysis(plateifu_ex):
 	figtitle='PLATEIFU_'+ str(plateifu_ex) + '_vmap.png'
 	fig.savefig(figtitle)
 	
-	plt.show()
+	#plt.show()
 	
 	return(KCRA_ST, KCDEC_ST, KCRA_ST_ERR, KCDEC_ST_ERR, KCRA_HA, KCDEC_HA, KCRA_HA_ERR, KCDEC_HA_ERR, KCRA_OIII, KCDEC_OIII, KCRA_OIII_ERR, KCDEC_OIII_ERR,px_v,px_vha,px_voiii,flag)
 
@@ -544,10 +544,22 @@ plateifu_list=t['PLATEIFU'][mask_noflag & mask_sig & mask_agn & mask_someoffset]
 #Ejemplo: galaxias barradas marcadas con el flag "revisar" que indica que el ON está lejos del centro de la imagen:
 plateifu_list=t['PLATEIFU'][mask_revisar]
 
-#(podemos definir la muestra que queramos según lo que nos interese)
-
 '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
 
+#(podemos definir la muestra que queramos según lo que nos interese)
+
+################################################################	
+## Si queremos representar todas las galaxias de la muestra: ###
+################################################################
+
+#primero elegimos qué tabla usamos: la de todo MaNGA o la de AGNs: 
+t=Table.read('tabla_manga_full_updated.ecsv',format='ascii.ecsv') #todo MaNGA
+#t=Table.read('tabla_mangaagn_updated.ecsv',format='ascii.ecsv') #catálogo de AGNs
+plateifus=t['PLATEIFU']
+
+#Hacemos el código de 200 en 200 y vigilamos que no dé error (si da error se vuelve a correr)
+print('GALAXIAS 0000-0200')
+plateifu_list=plateifus[0:200] #lista de los nombres de las galaxias que vamos a representar
 
 for i in range(len(plateifu_list)):
 	start=time.time()
