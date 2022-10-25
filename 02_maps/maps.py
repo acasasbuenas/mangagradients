@@ -555,6 +555,14 @@ plateifu_list=t['PLATEIFU'][mask_revisar]
 #primero elegimos qué tabla usamos: la de todo MaNGA o la de AGNs: 
 t=Table.read('tabla_manga_full_updated.ecsv',format='ascii.ecsv') #todo MaNGA
 #t=Table.read('tabla_mangaagn_updated.ecsv',format='ascii.ecsv') #catálogo de AGNs
+
+#(esto es una comprobación por si el número de vecinos está mal guardado) 
+for i in range(len(t)):
+	try:
+		t['NNEIGH'][i]=t['NNEIGH'][i][0]
+	except:
+		pass
+
 plateifus=t['PLATEIFU']
 
 #Hacemos el código de 200 en 200 y vigilamos que no dé error (si da error se vuelve a correr)
