@@ -471,10 +471,13 @@ t=Table.read('tabla_manga_full_updated.ecsv',format='ascii.ecsv')
 
 #(esto es una comprobación por si el número de vecinos está mal guardado) 
 for i in range(len(t)):
-	try:
-		t['NNEIGH'][i]=t['NNEIGH'][i][0]
-	except:
-		pass
+    try:
+        t['NNEIGH'][i]=t['NNEIGH'][i][0]
+        t['Q_NN'][i]=t['Q_NN'][i][0]
+        t['Q_LSS'][i]=t['Q_LSS'][i][0]
+        t['LOGMASS'][i]=t['LOGMASS'][i][0]
+    except:
+        pass
 
 #definimos los offsets del KC al ON, y los offsets entre KC de las componentes
 d_stellar=np.sqrt((t['KCRA_ST'])**2+(t['KCDEC_ST'])**2)
@@ -558,10 +561,13 @@ t=Table.read('tabla_manga_full_updated.ecsv',format='ascii.ecsv') #todo MaNGA
 
 #(esto es una comprobación por si el número de vecinos está mal guardado) 
 for i in range(len(t)):
-	try:
-		t['NNEIGH'][i]=t['NNEIGH'][i][0]
-	except:
-		pass
+    try:
+        t['NNEIGH'][i]=t['NNEIGH'][i][0]
+        t['Q_NN'][i]=t['Q_NN'][i][0]
+        t['Q_LSS'][i]=t['Q_LSS'][i][0]
+        t['LOGMASS'][i]=t['LOGMASS'][i][0]
+    except:
+        pass
 
 plateifus=t['PLATEIFU']
 
